@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="calculator" class="inhatc.cse.spring.di.xml.Calculator" />
+    <bean id="myCalc" class="inhatc.cse.spring.di.xml.MyCalculator">
+        <constructor-arg ref="calculator" />
+        <constructor-arg value="10" />
+        <constructor-arg value="2" />
+    </bean>
+    <!--  <property name="calculator">
+          <ref bean="calculator" />
+      </property>
+      <property name="firstNum" value="20" />
+      <property name="secondNum" value="2" />-->
+</beans>
