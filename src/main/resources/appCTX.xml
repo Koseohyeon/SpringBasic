@@ -13,4 +13,16 @@
       </property>
       <property name="firstNum" value="20" />
       <property name="secondNum" value="2" />-->
+    <bean id="person" class="inhatc.cse.spring.di.intro.Person">
+        <property name="firstname" value="고"/>
+        <property name="lastname" value="서현"/>
+        <property name="age" value="22"/>
+        <property name="address">
+            <bean class="inhatc.cse.spring.di.intro.Address">
+                <property name="city" value="인천시 미추홀구"/>
+            </bean>
+        </property>
+    </bean>
+
+
 </beans>
