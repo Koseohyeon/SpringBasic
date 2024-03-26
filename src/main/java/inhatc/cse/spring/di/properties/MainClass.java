@@ -10,5 +10,6 @@ public class MainClass {
         MyInfo myInfo = ctx.getBean("myInfo", MyInfo.class);
         System.out.println(myInfo);
 
+
     }
 }
