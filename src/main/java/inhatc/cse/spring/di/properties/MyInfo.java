@@ -1,8 +1,6 @@
 package inhatc.cse.spring.di.properties;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class MyInfo {
     private String name;
@@ -58,18 +56,7 @@ public class MyInfo {
                 ", height=" + height +
                 ", weight=" + weight +
                 ", hobbys=" + hobbys +
-                ", bmiCalc=" + bmiCalc.toString() +
+                ", bmiCalc=" + bmiCalc +
                 '}';
-    }
-
-    public MyInfo(String name, double height, double weight, ArrayList<String> hobbys, BMICalc bmiCalc) {
-        this.name = name;
-        this.height = height;
-        this.weight = weight;
-        this.hobbys = hobbys;
-        this.bmiCalc = bmiCalc;
-    }
-
-    public MyInfo() {
     }
 }

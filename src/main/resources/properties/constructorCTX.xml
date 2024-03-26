@@ -4,16 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="bmiCalc" class="inhatc.cse.spring.di.properties.BMICalc">
-        <property name="low" value="18.5" />
-        <property name="normal" value="23" />
-        <property name="over" value="25" />
-        <property name="obesity" value="30" />
+        <property name="low" value="0" />
+        <property name="normal" value="18.5" />
+        <property name="over" value="23" />
+        <property name="obesity" value="25" />
     </bean>
     <bean id="myInfo" class="inhatc.cse.spring.di.properties.MyInfo">
-    <property name="height">
-        <value>187</value>
-    </property>
-    <property name="name" value="홍길동" />
-    <property name="weight" value="83.4" />
+        <property name="height" value="187"/>
+        <property name="weight" value="83.4"/>
+        <property name="bmiCalc" ref="bmiCalc"/>
     </bean>
 </beans>
