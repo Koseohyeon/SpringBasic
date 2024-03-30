@@ -11,11 +11,9 @@ public class Main {
         System.out.println(s1.getHobbys());
         s1.getHobbys().stream().sorted().forEach(System.out::println);
 
-
-
         Student s2 = ctx.getBean("student2", Student.class);
         System.out.println(s2.getName());
         System.out.println(s2.getHobbys());
-        
+
     }
 }
