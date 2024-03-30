@@ -1,3 +1,3 @@
 Java_Spring_Basic
 
-- 링크반 수업
+- 링크반 스프링 수업
