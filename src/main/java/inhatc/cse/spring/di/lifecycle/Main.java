@@ -16,7 +16,6 @@ public class Main {
 
         Student2 student2 = ctx.getBean("your_Info",Student2.class);
         System.out.println(student2);
-
         ctx.close();
     }
 
