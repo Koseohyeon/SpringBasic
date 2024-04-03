@@ -63,4 +63,5 @@ public class BMICalc {
                 ", obesity=" + obesity +
                 '}';
     }
+
 }
