@@ -59,4 +59,9 @@ public class MyInfo {
                 ", bmiCalc=" + bmiCalc +
                 '}';
     }
+
+    public MyInfo(String name, ArrayList<String> hobbys) {
+        this.name = name;
+        this.hobbys = hobbys;
+    }
 }

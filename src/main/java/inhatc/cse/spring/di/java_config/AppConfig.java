@@ -11,7 +11,7 @@ public class AppConfig {
     public Student student1(){
         ArrayList<String> hobbys = new ArrayList<>();
         hobbys.add("축구");
-        hobbys.add("야구");
+        hobbys.add("등산");
         hobbys.add("농구");
         //hobbys.stream().forEach(System.out::println);
         Student student= new Student("홍길동",20,hobbys);

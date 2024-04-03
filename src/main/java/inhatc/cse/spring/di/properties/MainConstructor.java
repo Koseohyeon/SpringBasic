@@ -20,6 +20,7 @@ public class MainConstructor {
 //입력받아 출력하기
 package inhatc.cse.spring.di.properties;
 
+import inhatc.cse.spring.di.java_config.Student;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -30,21 +31,15 @@ public class MainConstructor {
         String location = "classpath:properties/constructorCTX.xml";
 
         try (AbstractApplicationContext ctx = new GenericXmlApplicationContext(location)) {
-            MyInfo myInfo = ctx.getBean("myInfo", MyInfo.class);
+            MyInfo myInfo1 = ctx.getBean("myInfo1", MyInfo.class);
 
-            Scanner scanner = new Scanner(System.in);
+            System.out.println(myInfo1.getName());
+            System.out.println(myInfo1.getHobbys());
+            BMICalc bmiCalc = myInfo1.getBmiCalc();
+            bmiCalc.bmiCalc(myInfo1.getWeight(), myInfo1.getHeight());
+            myInfo1.getHobbys().stream().sorted().forEach(System.out::println);
 
-            System.out.print("키를 입력하세요(cm): ");
-            double height = scanner.nextDouble();
 
-            System.out.print("몸무게를 입력하세요(kg): ");
-            double weight = scanner.nextDouble();
-
-            myInfo.setHeight(height);
-            myInfo.setWeight(weight);
-
-            BMICalc bmiCalc = myInfo.getBmiCalc();
-            bmiCalc.bmiCalc(myInfo.getWeight(), myInfo.getHeight());
         }
     }
 }
